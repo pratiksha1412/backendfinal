@@ -1,4 +1,4 @@
-/*package com.niit.shoppingcart.dao.impl;
+package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
@@ -31,12 +31,12 @@ public class CartDAOImpl implements CartDAO{
 	public boolean save(Cart cart) {
 		
 	try{
-		
+		/*
 		if(get(cart.getId())!=null)
 		{
 			return false;
 		}
-		
+		*/
 		sessionFactory.getCurrentSession().save(cart);
 		
 		return true;
@@ -119,12 +119,12 @@ public class CartDAOImpl implements CartDAO{
 	public List<Cart> list() {
 		return null;
 		
-		String hql="from cart";
+		/*String hql="from cart";
 		
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		
 		return query.list();
-		
+		*/
 		
 	}
 
@@ -133,4 +133,3 @@ public class CartDAOImpl implements CartDAO{
 
 
 
-*/

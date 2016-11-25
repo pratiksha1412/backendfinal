@@ -1,4 +1,4 @@
-/*package com.niit.shoppingcartbackend;
+package com.niit.shoppingcartbackend;
 
 import static org.junit.Assert.*;
 
@@ -66,13 +66,13 @@ public class ProductTestCase {
 	
 	
 
-	@Test
+	/*@Test
 	public void deleteProductTestCase()
 	{
 		product.setId("1");
 		boolean status = productDAO.delete(product);
 		
-		Assert.assertEquals("delete Product Test case",true, status);
+		Assert.assertEquals("deleteProductTestcase",true, status);
 	}
 
 	@Test
@@ -80,7 +80,7 @@ public class ProductTestCase {
 	{
 		product.setId("2");
 		Boolean status= productDAO.delete(product);
-		Assert.assertEquals("Delete Product Test Case",true, status);
+		Assert.assertEquals("DeleteProductTestCase",true, status);
 	}
 	
 	
@@ -91,9 +91,15 @@ public class ProductTestCase {
 		
 		product.setId("3");
 		Boolean status= productDAO.update(product);
-		product.setDescription("this is footware Product");
+		product.setName("shoes");
+
+
+		product.setPrice("5000");
+
+		product.setSupplier_id("3");
+		product.setCategory_id("2");
 		//Boolean status = product.update(product);
-		Assert.assertEquals("update Product Test Case",true, status);
+		Assert.assertEquals("updateProductTestCase",true, status);
 	}
 	
 	
@@ -102,19 +108,17 @@ public class ProductTestCase {
 	{
 		
 
-		Assert.assertEquals("Delete Product Test Case",null, productDAO.get("mod-07"));
+		Assert.assertEquals("Delete Product Test Case",null, productDAO.get("1"));
 		
 	}
 	
     @Test
 	public void getAllProductTestCase()
 	{
-		Assert.assertEquals("get all test cases ",3,productDAO.list().size());
+		Assert.assertEquals("get all test cases ",4,productDAO.list().size());
 	}
 	
 
 
-
-}
-
 */
+}

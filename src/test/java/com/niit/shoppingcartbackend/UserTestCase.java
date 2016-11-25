@@ -1,4 +1,4 @@
-/*package com.niit.shoppingcartbackend;
+package com.niit.shoppingcartbackend;
 
 import static org.junit.Assert.*;
 
@@ -70,4 +70,3 @@ public class UserTestCase {
 		Assert.assertEquals("delete User Test case",true, status);
 	}
 }
-*/

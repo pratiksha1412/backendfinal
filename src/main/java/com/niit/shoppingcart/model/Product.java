@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Table(name="product")
 public class Product {
 	@Id
-	@Column(name="name")
+	@Column
 	public String id;
 	public String name;
 	public String price;

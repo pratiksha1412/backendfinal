@@ -58,31 +58,31 @@ public class CategoryTestCases {
 	
 
 	@Test
-	public void deleteCategoryTestCase()
+	public void deleteCategoryTestcase()
 	{
 		category.setId("1");
 		boolean status = categoryDAO.delete(category);
 		
-		Assert.assertEquals("delete Category Test case",true, status);
+		Assert.assertEquals("deleteCategoryTestcase",true, status);
 	}
 
-	/*@Test
+	@Test
 	public void deleteCategoryTestCase()
 	{
 		category.setId("2");
 		Boolean status= categoryDAO.delete(category);
-		Assert.assertEquals("Delete Category Test Case",true, status);
-	}*/
+		Assert.assertEquals("DeleteCategoryTestCase",true, status);
+	}
 	
 	
-	/*@Test
+	@Test
 	public void updateCategoryTestCase()
 	{
 		
 		
-		category.setId("3");
+		category.setId("1");
 		Boolean status= categoryDAO.update(category);
-		category.setDescription("this is footware Category");
+		category.setName("this is footware Category");
 		//Boolean status = category.update(category);
 		Assert.assertEquals("update Category Test Case",true, status);
 	}
@@ -93,16 +93,16 @@ public class CategoryTestCases {
 	{
 		
 
-		Assert.assertEquals("Delete Category Test Case",null, categoryDAO.get("mod-07"));
+		Assert.assertEquals("Delete Category Test Case",null, categoryDAO.get("2"));
 		
 	}
 	
      @Test
 	public void getAllCategoryTestCase()
 	{
-		Assert.assertEquals("get all test cases ",3,categoryDAO.list().size());
+		Assert.assertEquals("get all test cases ",6,categoryDAO.list().size());
 	}
-	*/
+	
 
 
 

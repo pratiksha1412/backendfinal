@@ -17,9 +17,9 @@ import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import com.niit.shoppingcart.model.Category;
 
 
-//import com.niit.shoppingcart.model.Cart;
+import com.niit.shoppingcart.model.Cart;
 //import com.niit.shoppingcart.model.Category;
-//import com.niit.shoppingcart.model.Product;
+import com.niit.shoppingcart.model.Product;
 //import com.niit.shoppingcart.model.Supplier;
 //import com.niit.shoppingcart.model.User;
 
@@ -66,9 +66,9 @@ import com.niit.shoppingcart.model.Category;
 			
 		sessionBuilder.addAnnotatedClasses(Category.class);
 		//sessionBuilder.addAnnotatedClass(Supplier.class);
-		//	sessionBuilder.addAnnotatedClass(Product.class);
+			sessionBuilder.addAnnotatedClass(Product.class);
 		//	sessionBuilder.addAnnotatedClass(User.class);
-		//	sessionBuilder.addAnnotatedClass(Cart.class);
+			sessionBuilder.addAnnotatedClass(Cart.class);
 			
 			return sessionBuilder.buildSessionFactory();
 			

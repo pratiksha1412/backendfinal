@@ -1,4 +1,4 @@
-/*package com.niit.shoppingcart.dao;
+package com.niit.shoppingcart.dao;
 
 import java.util.List;
 
@@ -17,4 +17,3 @@ public boolean save(Cart cart);
 	public List<Cart> list();
 
 }
-*/

@@ -1,4 +1,4 @@
-/*package com.niit.shoppingcartbackend;
+package com.niit.shoppingcartbackend;
 
 import static org.junit.Assert.*;
 
@@ -47,15 +47,15 @@ public class CartTestCase {
 	@Test
 	public void createCartTestCase()
 	{
-		cart.setId("6");
+		cart.setId("3");
 		
 		
 		
-		cart.setPrice("1000");
+		cart.setPrice("500");
 		
 		cart.setQuantity("5");
 		
-		cart.setProduct_id("1");
+		cart.setProduct_id("2");
 		
 		
 		
@@ -71,19 +71,19 @@ public class CartTestCase {
 	@Test
 	public void deleteCartTestCase()
 	{
-		cart.setId("1");
+		cart.setId("6");
 		boolean status = cartDAO.delete(cart);
 		
-		Assert.assertEquals("delete Cart Test case",true, status);
+		Assert.assertEquals("deleteCartTestcase",true, status);
 	}
 
-	@Test
+	/*@Test
 	public void deleteCartTestCase()
 	{
 		cart.setId("2");
 		Boolean status= cartDAO.delete(cart);
-		Assert.assertEquals("Delete Cart Test Case",true, status);
-	}
+		Assert.assertEquals("DeleteCartTestCase",true, status);
+	}*/
 	
 	
 	@Test
@@ -91,9 +91,12 @@ public class CartTestCase {
 	{
 		
 		
-		cart.setId("3");
+		cart.setId("2");
 		Boolean status= cartDAO.update(cart);
-		cart.setDescription("this is footware Cart");
+	//	cart.setQuantity("this is footware Cart");
+		cart.setPrice("200");
+		cart.setProduct_id("3");
+		
 		//Boolean status = cart.update(cart);
 		Assert.assertEquals("update Cart Test Case",true, status);
 	}
@@ -104,14 +107,14 @@ public class CartTestCase {
 	{
 		
 
-		Assert.assertEquals("Delete Cart Test Case",null, cartDAO.get("mod-07"));
+		Assert.assertEquals("Delete Cart Test Case",null, cartDAO.get("2"));
 		
 	}
 	
     @Test
 	public void getAllCartTestCase()
 	{
-		Assert.assertEquals("get all test cases ",3,cartDAO.list().size());
+		Assert.assertEquals("get all test cases ",2,cartDAO.list().size());
 	}
 	
 
@@ -120,4 +123,3 @@ public class CartTestCase {
 }
 
 
-*/

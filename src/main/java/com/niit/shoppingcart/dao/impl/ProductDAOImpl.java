@@ -1,4 +1,4 @@
-/*package com.niit.shoppingcart.dao.impl;
+package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
@@ -33,10 +33,10 @@ public class ProductDAOImpl implements ProductDAO {
 		
 	try{
 		
-		if(get(product.getId())!=null)
+		/*if(get(product.getId())!=null)
 		{
 			return false;
-		}
+		}*/
 		
 		sessionFactory.getCurrentSession().save(product);
 		
@@ -120,17 +120,15 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<Product> list() {
 		return null;
 		
-		String hql="from product";
+		/*String hql="from product";
 		
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		
 		return query.list();
-		
+		*/
 		
 	}
 
 }
 
 
-
-*/

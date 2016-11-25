@@ -1,4 +1,4 @@
-/*package com.niit.shoppingcart.dao.impl;
+package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
@@ -90,12 +90,11 @@ public class UserDAOImpl implements UserDAO{
 
 	public List<User> list() {
 	return null;
-		String hql="from user";
-	Query query=sessionFactory.getCurrentSession().createQuery();
-		
-		return query.list();
-		
+//		String hql="from user";
+//	Query query=sessionFactory.getCurrentSession().createQuery();
+//		
+//		return query.list();
+//		
 		}
 
 }
-*/
