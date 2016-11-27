@@ -2,22 +2,19 @@ package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
-import javax.persistence.Query;
-
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.shoppingcart.dao.SupplierDAO;
-import com.niit.shoppingcart.model.Supplier;
+import com.niit.shoppingcart.dao.BillingAddressDAO;
+import com.niit.shoppingcart.model.BillingAddress;
+@Repository("billingAddressDAO")
+public class BillingAddressDAOImpl implements BillingAddressDAO{
 
-@Repository("supplierDAO")
-public class SupplierDAOImpl implements SupplierDAO{
+	//private static final Logger Logger = LoggerFactory.getLogger(BillingAddressDAOImpl.class);
 	
-	//private static final Logger Logger = LoggerFactory.getLogger(SupplierDAOImpl.class);
-	
-			public SupplierDAOImpl()
+			public BillingAddressDAOImpl()
 			{
 				
 			}
@@ -25,7 +22,7 @@ public class SupplierDAOImpl implements SupplierDAO{
 			@Autowired
 			private SessionFactory sessionFactory;
 			
-			public SupplierDAOImpl(SessionFactory sessionFactory)
+			public BillingAddressDAOImpl(SessionFactory sessionFactory)
 			{
 				
 					this.sessionFactory=sessionFactory;
@@ -33,16 +30,16 @@ public class SupplierDAOImpl implements SupplierDAO{
 			}
 
 			@Transactional
-			public boolean save(Supplier supplier) {
+			public boolean save(BillingAddress billingAddress) {
 				
 			try{
-				
-				/*if(get(supplier.getId())!=null)
+				/*
+				if(get(billingAddress.getId())!=null)
 				{
 					return false;
-				}
-				*/
-				sessionFactory.getCurrentSession().save(supplier);
+				}*/
+				
+				sessionFactory.getCurrentSession().save(billingAddress);
 				
 				return true;
 				
@@ -63,15 +60,15 @@ public class SupplierDAOImpl implements SupplierDAO{
 			
 			@Transactional
 			
-			public boolean update(Supplier supplier) {
+			public boolean update(BillingAddress billingAddress) {
 				
 				try{
-					if(get(supplier.getId())!=null)
+					if(get(billingAddress.getId())!=null)
 					{
 						return false;
 					}
 					
-					sessionFactory.openSession().update(supplier);
+					sessionFactory.openSession().update(billingAddress);
 					
 					return true;
 					
@@ -90,22 +87,22 @@ public class SupplierDAOImpl implements SupplierDAO{
 			
 			@Transactional
 
-			public Supplier get(String id) {
+			public BillingAddress get(String id) {
 				
-				return(Supplier) sessionFactory.openSession().get(Supplier.class,id);
+				return(BillingAddress) sessionFactory.openSession().get(BillingAddress.class,id);
 			}
 			
 			
 			@Transactional
-			public boolean delete(Supplier supplier) {
+			public boolean delete(BillingAddress billingAddress) {
 				
 				try{
-					if(get(supplier.getId())!=null)
+					/*if(get(billingAddress.getId())!=null)
 					{
 						return false;
-					}
+					}*/
 					
-					sessionFactory.openSession().delete(supplier);
+					sessionFactory.openSession().delete(billingAddress);
 					
 					return true;
 					
@@ -121,10 +118,10 @@ public class SupplierDAOImpl implements SupplierDAO{
 				
 			}
 
-			public List<Supplier> list() {
+			public List<BillingAddress> list() {
 				return null;
 				
-				/*String hql="from supplier";
+				/*String hql="from billingAddress";
 				
 				Query query=sessionFactory.getCurrentSession().createQuery(hql);
 				
@@ -133,11 +130,7 @@ public class SupplierDAOImpl implements SupplierDAO{
 				
 			}
 
-			public Supplier get(Supplier id) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-
 	}
+
 
 

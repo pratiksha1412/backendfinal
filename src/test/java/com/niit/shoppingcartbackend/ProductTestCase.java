@@ -45,11 +45,11 @@ public class ProductTestCase {
 	@Test
 	public void createProductTestCase()
 	{
-		product.setId("6");
+		product.setId("5");
 		
-		product.setName("kolhapuri");
+		product.setName("KITU");
 		
-		product.setPrice("1000");
+		product.setPrice("100");
 		
 		product.setStock("5");
 		
@@ -66,23 +66,15 @@ public class ProductTestCase {
 	
 	
 
-	/*@Test
-	public void deleteProductTestCase()
-	{
-		product.setId("1");
-		boolean status = productDAO.delete(product);
-		
-		Assert.assertEquals("deleteProductTestcase",true, status);
-	}
-
 	@Test
 	public void deleteProductTestCase()
 	{
-		product.setId("2");
-		Boolean status= productDAO.delete(product);
-		Assert.assertEquals("DeleteProductTestCase",true, status);
+		product.setId("6");
+		boolean status = productDAO.delete(product);
+		
+		Assert.assertEquals("deleteProductTestCase",true, status);
 	}
-	
+
 	
 	@Test
 	public void updateProductTestCase()
@@ -94,7 +86,7 @@ public class ProductTestCase {
 		product.setName("shoes");
 
 
-		product.setPrice("5000");
+		product.setPrice("500");
 
 		product.setSupplier_id("3");
 		product.setCategory_id("2");
@@ -115,10 +107,10 @@ public class ProductTestCase {
     @Test
 	public void getAllProductTestCase()
 	{
-		Assert.assertEquals("get all test cases ",4,productDAO.list().size());
+		Assert.assertEquals("get all test cases ",5,productDAO.list().size());
 	}
 	
 
 
-*/
+
 }

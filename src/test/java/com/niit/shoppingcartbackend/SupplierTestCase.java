@@ -1,4 +1,4 @@
-/*
+
  
 package com.niit.shoppingcartbackend;
 
@@ -49,9 +49,10 @@ public class SupplierTestCase {
 	@Test
 	public void createSupplierTestCase()
 	{
-		supplier.setId("1");
+		supplier.setId("3");
 		
-		supplier.setName("ganpati");
+		supplier.setName("spark");
+		supplier.setAddress("chinchwad");
 		
 		Boolean status = supplierDAO.save(supplier);
 		
@@ -62,22 +63,15 @@ public class SupplierTestCase {
 	
 	
 
-	@Test
-	public void deleteSupplierTestCase()
-	{
-		supplier.setId("1");
-		boolean status = supplierDAO.delete(supplier);
-		
-		Assert.assertEquals("delete Supplier Test case",true, status);
-	}
-
-	@Test
+	/*@Test
 	public void deleteSupplierTestCase()
 	{
 		supplier.setId("2");
-		Boolean status= supplierDAO.delete(supplier);
-		Assert.assertEquals("Delete Supplier Test Case",true, status);
+		boolean status = supplierDAO.delete(supplier);
+		
+		Assert.assertEquals("deleteSupplierTestcase",true, status);
 	}
+
 	
 	
 	@Test
@@ -85,9 +79,10 @@ public class SupplierTestCase {
 	{
 		
 		
-		supplier.setId("3");
+		supplier.setId("");
 		Boolean status= supplierDAO.update(supplier);
-		supplier.setDescription("this is footware Supplier");
+		supplier.setAddress("tuljapur");
+		supplier.setName("latest");
 		//Boolean status = supplier.update(supplier);
 		Assert.assertEquals("update Supplier Test Case",true, status);
 	}
@@ -98,7 +93,7 @@ public class SupplierTestCase {
 	{
 		
 
-		Assert.assertEquals("Delete Supplier Test Case",null, supplierDAO.get("mod-07"));
+		Assert.assertEquals("Delete Supplier Test Case",null, supplierDAO.get("1"));
 		
 	}
 	
@@ -110,7 +105,6 @@ public class SupplierTestCase {
 	
 
 
-
+*/
 }
 
-*/

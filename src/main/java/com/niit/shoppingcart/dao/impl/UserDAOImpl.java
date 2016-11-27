@@ -32,10 +32,10 @@ public class UserDAOImpl implements UserDAO{
 	public boolean save(User user) {
 	
 		try {
-			if(get(user.getId())!= null)
+			/*if(get(user.getId())!= null)
 			{
 			return false;
-			}
+			}*/
               sessionFactory.getCurrentSession().save(user);
 			
 			return true;

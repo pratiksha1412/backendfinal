@@ -44,7 +44,7 @@ public class UserTestCase {
 	@Test
 	public void createUserTestCase()
 	{
-		user.setId("i6");
+		user.setId("i2");
 		
 		user.setName("ganpati12");
 		user.setPassword("asaa2");
@@ -57,10 +57,10 @@ public class UserTestCase {
 		Assert.assertEquals("createUserTestcase", true, status);
 	}
 	
+}
 	
 	
-	
-
+/*
 	@Test
 	public void deleteUserTestCase()
 	{
@@ -70,3 +70,4 @@ public class UserTestCase {
 		Assert.assertEquals("delete User Test case",true, status);
 	}
 }
+*/
