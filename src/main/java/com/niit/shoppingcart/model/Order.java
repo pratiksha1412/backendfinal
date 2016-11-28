@@ -1,61 +1,80 @@
 package com.niit.shoppingcart.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
-@Entity
+
 @Component
-@Table
-public class Order {
+
+public class Order implements Serializable {
+	private  static final long serialVersionUID=1L;
+	private String userID;
+	private String orderID;
+	private ShippingAddress shippingAddress;
+	private BillingAddress billingAddress;
+	private Cart cart;
+	private long totalAmount;
+	private PaymentMethod paymentMethod;
 	
-	@Id
-	@Column
 	
-	public String id;
-	public String product_name;
-	public String price;
-	public String billing_address;
-	public String shipping_address;
-	public String payment_methode;
-	public String getId() {
-		return id;
+	public String getUserID() {
+		return userID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setUserID(String userID) {
+		this.userID = userID;
 	}
-	public String getProduct_name() {
-		return product_name;
+	public String getOrderID() {
+		return orderID;
 	}
-	public void setProduct_name(String product_name) {
-		this.product_name = product_name;
+	public void setOrderID(String orderID) {
+		this.orderID = orderID;
 	}
-	public String getPrice() {
-		return price;
+	public ShippingAddress getShippingAddress() {
+		return shippingAddress;
 	}
-	public void setPrice(String price) {
-		this.price = price;
+	public void setShippingAddress(ShippingAddress shippingAddress) {
+		this.shippingAddress = shippingAddress;
 	}
-	public String getBilling_address() {
-		return billing_address;
+	public BillingAddress getBillingAddress() {
+		return billingAddress;
 	}
-	public void setBilling_address(String billing_address) {
-		this.billing_address = billing_address;
+	public void setBillingAddress(BillingAddress billingAddress) {
+		this.billingAddress = billingAddress;
 	}
-	public String getShipping_address() {
-		return shipping_address;
+	public Cart getCart() {
+		return cart;
 	}
-	public void setShipping_address(String shipping_address) {
-		this.shipping_address = shipping_address;
+	public void setCart(Cart cart) {
+		this.cart = cart;
 	}
-	public String getPayment_methode() {
-		return payment_methode;
+	public long getTotalAmount() {
+		return totalAmount;
 	}
-	public void setPayment_methode(String payment_methode) {
-		this.payment_methode = payment_methode;
+	public void setTotalAmount(long totalAmount) {
+		this.totalAmount = totalAmount;
 	}
+	public PaymentMethod getPaymentMethod() {
+		return paymentMethod;
+	}
+	/*public void setPaymentMethod(PaymentMethod paymentMethod2) {
+		this.paymentMethod = paymentMethod2;
+	}*/
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	public void setPaymentMethod(PaymentMethod paymentMethod2) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	
 
+	
 }
+	
+	
