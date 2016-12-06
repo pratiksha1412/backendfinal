@@ -1,4 +1,4 @@
-package com.niit.shoppingcart.dao.impl;
+/*package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
@@ -33,11 +33,11 @@ public class BillingAddressDAOImpl implements BillingAddressDAO{
 			public boolean save(BillingAddress billingAddress) {
 				
 			try{
-				/*
+				
 				if(get(billingAddress.getId())!=null)
 				{
 					return false;
-				}*/
+				}
 				
 				sessionFactory.getCurrentSession().save(billingAddress);
 				
@@ -97,10 +97,10 @@ public class BillingAddressDAOImpl implements BillingAddressDAO{
 			public boolean delete(BillingAddress billingAddress) {
 				
 				try{
-					/*if(get(billingAddress.getId())!=null)
+					if(get(billingAddress.getId())!=null)
 					{
 						return false;
-					}*/
+					}
 					
 					sessionFactory.openSession().delete(billingAddress);
 					
@@ -121,11 +121,11 @@ public class BillingAddressDAOImpl implements BillingAddressDAO{
 			public List<BillingAddress> list() {
 				return null;
 				
-				/*String hql="from billingAddress";
+				String hql="from billingAddress";
 				
 				Query query=sessionFactory.getCurrentSession().createQuery(hql);
 				
-				return query.list();*/
+				return query.list();
 				
 				
 			}
@@ -134,3 +134,4 @@ public class BillingAddressDAOImpl implements BillingAddressDAO{
 
 
 
+*/

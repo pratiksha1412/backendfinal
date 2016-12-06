@@ -1,5 +1,4 @@
 
- 
 package com.niit.shoppingcartbackend;
 
 import static org.junit.Assert.*;
@@ -54,7 +53,7 @@ public class SupplierTestCase {
 		supplier.setName("spark");
 		supplier.setAddress("chinchwad");
 		
-		Boolean status = supplierDAO.save(supplier);
+		Boolean status = supplierDAO.saveOrUpdate(supplier);
 		
 		Assert.assertEquals("createSupplierTestcase", true, status);
 	}
@@ -63,11 +62,11 @@ public class SupplierTestCase {
 	
 	
 
-	/*@Test
+	@Test
 	public void deleteSupplierTestCase()
 	{
 		supplier.setId("2");
-		boolean status = supplierDAO.delete(supplier);
+		boolean status = supplierDAO.delete("supplier");
 		
 		Assert.assertEquals("deleteSupplierTestcase",true, status);
 	}
@@ -80,7 +79,7 @@ public class SupplierTestCase {
 		
 		
 		supplier.setId("");
-		Boolean status= supplierDAO.update(supplier);
+		Boolean status= supplierDAO.saveOrUpdate(supplier);
 		supplier.setAddress("tuljapur");
 		supplier.setName("latest");
 		//Boolean status = supplier.update(supplier);
@@ -93,7 +92,7 @@ public class SupplierTestCase {
 	{
 		
 
-		Assert.assertEquals("Delete Supplier Test Case",null, supplierDAO.get("1"));
+		Assert.assertEquals("Delete Supplier Test Case",null, supplierDAO.get("Supplier"));
 		
 	}
 	
@@ -105,6 +104,6 @@ public class SupplierTestCase {
 	
 
 
-*/
+
 }
 

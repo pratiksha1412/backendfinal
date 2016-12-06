@@ -2,6 +2,7 @@ package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -31,12 +32,12 @@ public class CartDAOImpl implements CartDAO{
 	public boolean save(Cart cart) {
 		
 	try{
-		/*
+		
 		if(get(cart.getId())!=null)
 		{
 			return false;
 		}
-		*/
+		
 		sessionFactory.getCurrentSession().save(cart);
 		
 		return true;
@@ -85,9 +86,9 @@ public class CartDAOImpl implements CartDAO{
 	
 	@Transactional
 
-	public Cart get(String id) {
+	public Cart get(long l) {
 		
-		return(Cart) sessionFactory.openSession().get(Cart.class,id);
+		return(Cart) sessionFactory.openSession().get(Cart.class,l);
 	}
 	
 	
@@ -117,15 +118,34 @@ public class CartDAOImpl implements CartDAO{
 	}
 
 	public List<Cart> list() {
-		return null;
 		
-		/*String hql="from cart";
+		String hql="from cart";
 		
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		
 		return query.list();
-		*/
 		
+		
+	}
+
+	public List<Cart> list(String userID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getTotalAmount(String loggedInUserid) {
+		return(Cart) sessionFactory.openSession().get(Cart.class,loggedInUserid);
+		
+	}
+
+	public void delete(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Cart get(String id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

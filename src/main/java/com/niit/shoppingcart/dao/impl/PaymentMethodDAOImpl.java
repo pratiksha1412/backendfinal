@@ -1,4 +1,4 @@
-package com.niit.shoppingcart.dao.impl;
+/*package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
@@ -29,11 +29,11 @@ public class PaymentMethodDAOImpl implements PaymentMethodDAO{
 	public boolean save(PaymentMethod paymentMethod) {
 		
 	try{
-		/*
+		
 		if(get(paymentMethod.getId())!=null)
 		{
 			return false;
-		}*/
+		}
 		
 		sessionFactory.getCurrentSession().save(paymentMethod);
 		
@@ -93,10 +93,10 @@ public class PaymentMethodDAOImpl implements PaymentMethodDAO{
 	public boolean delete(PaymentMethod paymentMethod) {
 		
 		try{
-			/*if(get(paymentMethod.getId())!=null)
+			if(get(paymentMethod.getId())!=null)
 			{
 				return false;
-			}*/
+			}
 			
 			sessionFactory.openSession().delete(paymentMethod);
 			
@@ -117,11 +117,11 @@ public class PaymentMethodDAOImpl implements PaymentMethodDAO{
 	public List<PaymentMethod> list() {
 		return null;
 		
-		/*String hql="from paymentMethod";
+		String hql="from paymentMethod";
 		
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		
-		return query.list();*/
+		return query.list();
 		
 		
 	}
@@ -130,3 +130,4 @@ public class PaymentMethodDAOImpl implements PaymentMethodDAO{
 
 
 
+*/

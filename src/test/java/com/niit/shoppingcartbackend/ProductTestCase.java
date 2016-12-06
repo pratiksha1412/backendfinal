@@ -57,7 +57,7 @@ public class ProductTestCase {
 		
 		product.setSupplier_id("2");
 		
-		Boolean status = productDAO.save(product);
+		Boolean status = productDAO.saveOrUpdate(product);
 		
 		Assert.assertEquals("createProductTestcase", true, status);
 	}
@@ -77,12 +77,12 @@ public class ProductTestCase {
 
 	
 	@Test
-	public void updateProductTestCase()
+	public void saveOrUpdateProductTestCase()
 	{
 		
 		
 		product.setId("3");
-		Boolean status= productDAO.update(product);
+		Boolean status= productDAO.saveOrUpdate(product);
 		product.setName("shoes");
 
 
@@ -91,7 +91,7 @@ public class ProductTestCase {
 		product.setSupplier_id("3");
 		product.setCategory_id("2");
 		//Boolean status = product.update(product);
-		Assert.assertEquals("updateProductTestCase",true, status);
+		Assert.assertEquals("saveOrUpdateProductTestCase",true, status);
 	}
 	
 	

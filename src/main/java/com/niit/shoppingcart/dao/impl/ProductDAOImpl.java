@@ -2,6 +2,7 @@ package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -28,15 +29,15 @@ public class ProductDAOImpl implements ProductDAO {
 		
 	}
 
-	@Transactional
+	/*@Transactional
 	public boolean save(Product product) {
 		
 	try{
 		
-		/*if(get(product.getId())!=null)
+		if(get(product.getId())!=null)
 		{
 			return false;
-		}*/
+		}
 		
 		sessionFactory.getCurrentSession().save(product);
 		
@@ -82,7 +83,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 		
 		
-	}
+	}*/
 	
 	@Transactional
 
@@ -118,17 +119,41 @@ public class ProductDAOImpl implements ProductDAO {
 	}
 
 	public List<Product> list() {
-		return null;
 		
-		/*String hql="from product";
+		
+		String hql="from product";
 		
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		
 		return query.list();
-		*/
+		
 		
 	}
 
+	public boolean saveOrUpdate(Product product) {
+
+		try{
+			if(get(product.getId())!=null)
+			{
+				return false;
+			}
+			
+			sessionFactory.openSession().saveOrUpdate(product);
+			
+			return true;
+			
+		}
+		
+		catch (Exception e){
+			
+			e.printStackTrace();
+			
+			return false;
+			
+		}
+	}
+
+	
 }
 
 

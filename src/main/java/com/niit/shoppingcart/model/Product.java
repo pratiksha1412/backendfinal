@@ -23,6 +23,13 @@ public class Product {
 	public String stock;
 	public String category_id;
 	public String supplier_id;
+	public Object getGetName() {
+		return getName;
+	}
+	public void setGetName(Object getName) {
+		this.getName = getName;
+	}
+	public Object getName;
 	public String getId() {
 		return id;
 	}
@@ -61,7 +68,7 @@ public class Product {
 	}
 	
 	
-	@ManyToOne       /*(mappedBy="product",fetch=FetchType.EAGER)*/
+	/*@ManyToOne       (mappedBy="product",fetch=FetchType.EAGER)
 	@JoinColumn(name="category_id",updatable=false,insertable=false,nullable=false)
 	
 	private Category category;
@@ -72,5 +79,5 @@ public class Product {
 		this.category = (Category) category;
 	}
 	
-
+*/
 }

@@ -6,9 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
-@Entity
+
 @Component
-@Table (name="billingaddress")
+
 public class BillingAddress {
 	@Id
 	@Column

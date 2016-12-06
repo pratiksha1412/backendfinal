@@ -40,7 +40,7 @@ public class CategoryTestCases {
 		 
 		 System.out.println("The object is created");
 	 }
- 
+ /*
 	@Test
 	public void createCategoryTestCase()
 	{
@@ -53,7 +53,7 @@ public class CategoryTestCases {
 		Assert.assertEquals("createCategoryTestcase", true, status);
 	}
 	
-	
+	*/
 	
 	
 
@@ -76,12 +76,12 @@ public class CategoryTestCases {
 	
 	
 	@Test
-	public void updateCategoryTestCase()
+	public void saveOrUpdateCategoryTestCase()
 	{
 		
 		
 		category.setId("1");
-		Boolean status= categoryDAO.update(category);
+		Boolean status= categoryDAO.saveOrUpdate(category);
 		category.setName("this is footware Category");
 		//Boolean status = category.update(category);
 		Assert.assertEquals("update Category Test Case",true, status);

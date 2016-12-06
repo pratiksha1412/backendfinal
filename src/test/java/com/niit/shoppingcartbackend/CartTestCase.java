@@ -1,4 +1,4 @@
-package com.niit.shoppingcartbackend;
+/*package com.niit.shoppingcartbackend;
 
 import static org.junit.Assert.*;
 
@@ -77,13 +77,13 @@ public class CartTestCase {
 		Assert.assertEquals("deleteCartTestcase",true, status);
 	}
 
-	/*@Test
+	@Test
 	public void deleteCartTestCase()
 	{
 		cart.setId("2");
 		Boolean status= cartDAO.delete(cart);
 		Assert.assertEquals("DeleteCartTestCase",true, status);
-	}*/
+	}
 	
 	
 	@Test
@@ -123,3 +123,4 @@ public class CartTestCase {
 }
 
 
+*/

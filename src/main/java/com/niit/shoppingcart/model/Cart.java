@@ -12,15 +12,15 @@ import org.springframework.stereotype.Component;
 public class Cart {
 	@Id
 	@Column
-	public String id;
+	public long id;
 	public String product_id;
 	public String quantity;
 	public String price;
-	public String getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setId(long l) {
+		this.id = l;
 	}
 	public String getProduct_id() {
 		return product_id;
@@ -39,6 +39,10 @@ public class Cart {
 	}
 	public void setPrice(String price) {
 		this.price = price;
+	}
+	public void setStatus(char c) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

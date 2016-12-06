@@ -2,7 +2,9 @@ package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,7 +14,7 @@ import com.niit.shoppingcart.model.Category;
 @Repository("categoryDAO")
 public class CategoryDAOImpl implements CategoryDAO {
 
-	//private static final Logger Logger = LoggerFactory.getLogger(CategoryDAOImpl.class);
+	private static final org.slf4j.Logger Logger = LoggerFactory.getLogger(CategoryDAOImpl.class);
 	
 		public CategoryDAOImpl()
 		{
@@ -29,15 +31,15 @@ public class CategoryDAOImpl implements CategoryDAO {
 			
 		}
 
-		@Transactional
+		/*@Transactional
 		public boolean save(Category category) {
 			
 		try{
-			/*
+			
 			if(get(category.getId())!=null)
 			{
 				return false;
-			}*/
+			}
 			
 			sessionFactory.getCurrentSession().save(category);
 			
@@ -83,7 +85,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 			}
 			
 			
-		}
+		}*/
 		
 		@Transactional
 
@@ -119,15 +121,44 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 
 		public List<Category> list() {
-			return null;
 			
-			/*String hql="from category";
+			
+			String hql="from category";
 			
 			Query query=sessionFactory.getCurrentSession().createQuery(hql);
 			
-			return query.list();*/
+			return query.list();
 			
 			
+		}
+
+		public boolean saveOrUpdate(Category category) {
+			try{
+				
+				if(get(category.getId())!=null)
+				{
+					return false;
+				}
+				
+				sessionFactory.getCurrentSession().saveOrUpdate(category);
+				
+				return true;
+				
+			}
+			
+			catch (Exception e){
+				
+				e.printStackTrace();
+				
+				return false;
+				
+				
+			}
+		}
+
+		public boolean delete(String id) {
+			// TODO Auto-generated method stub
+			return false;
 		}
 
 }

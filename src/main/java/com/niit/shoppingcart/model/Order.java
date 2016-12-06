@@ -19,7 +19,7 @@ public class Order implements Serializable {
 	private BillingAddress billingAddress;
 	private Cart cart;
 	private long totalAmount;
-	private PaymentMethod paymentMethod;
+	private String paymentMethod;
 	
 	
 	public String getUserID() {

@@ -1,4 +1,4 @@
-package com.niit.shoppingcart.dao.impl;
+/*package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
@@ -34,11 +34,11 @@ public class ShippingAddressDAOImpl implements ShippingAddressDAO{
 	public boolean save(ShippingAddress shippingAddress) {
 		
 	try{
-		/*
+		
 		if(get(shippingAddress.getId())!=null)
 		{
 			return false;
-		}*/
+		}
 		
 		sessionFactory.getCurrentSession().save(shippingAddress);
 		
@@ -98,10 +98,10 @@ public class ShippingAddressDAOImpl implements ShippingAddressDAO{
 	public boolean delete(ShippingAddress shippingAddress) {
 		
 		try{
-			/*if(get(shippingAddress.getId())!=null)
+			if(get(shippingAddress.getId())!=null)
 			{
 				return false;
-			}*/
+			}
 			
 			sessionFactory.openSession().delete(shippingAddress);
 			
@@ -122,11 +122,11 @@ public class ShippingAddressDAOImpl implements ShippingAddressDAO{
 	public List<ShippingAddress> list() {
 		return null;
 		
-		/*String hql="from shippingAddress";
+		String hql="from shippingAddress";
 		
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		
-		return query.list();*/
+		return query.list();
 		
 		
 	}
@@ -137,3 +137,4 @@ public class ShippingAddressDAOImpl implements ShippingAddressDAO{
 
 
 
+*/

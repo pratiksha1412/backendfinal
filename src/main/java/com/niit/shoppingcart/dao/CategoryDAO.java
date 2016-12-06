@@ -6,9 +6,9 @@ import com.niit.shoppingcart.model.Category;
 
 public interface CategoryDAO {
 
-	public boolean save(Category category);
+	//public boolean save(Category category);
 	
-	public boolean update(Category category);
+	//public boolean update(Category category);
 	
 	public Category get(String id);
 	
@@ -16,6 +16,10 @@ public interface CategoryDAO {
 	
 	
 	public List<Category> list();
+
+	public boolean saveOrUpdate(Category category);
+
+	public boolean delete(String id);
 
 	
 }

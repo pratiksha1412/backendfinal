@@ -2,8 +2,7 @@ package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
-import javax.persistence.Query;
-
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -32,16 +31,16 @@ public class SupplierDAOImpl implements SupplierDAO{
 				
 			}
 
-			@Transactional
+			/*@Transactional
 			public boolean save(Supplier supplier) {
 				
 			try{
 				
-				/*if(get(supplier.getId())!=null)
+				if(get(supplier.getId())!=null)
 				{
 					return false;
 				}
-				*/
+				
 				sessionFactory.getCurrentSession().save(supplier);
 				
 				return true;
@@ -86,7 +85,7 @@ public class SupplierDAOImpl implements SupplierDAO{
 				}
 				
 				
-			}
+			}*/
 			
 			@Transactional
 
@@ -122,13 +121,13 @@ public class SupplierDAOImpl implements SupplierDAO{
 			}
 
 			public List<Supplier> list() {
-				return null;
 				
-				/*String hql="from supplier";
+				
+				String hql="from supplier";
 				
 				Query query=sessionFactory.getCurrentSession().createQuery(hql);
 				
-				return query.list();*/
+				return query.list();
 				
 				
 			}
@@ -136,6 +135,35 @@ public class SupplierDAOImpl implements SupplierDAO{
 			public Supplier get(Supplier id) {
 				// TODO Auto-generated method stub
 				return null;
+			}
+
+			public boolean delete(String id) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+
+			public boolean saveOrUpdate(Supplier supplier) {
+				
+					
+					try{
+						if(get(supplier.getId())!=null)
+						{
+							return false;
+						}
+						
+						sessionFactory.openSession().saveOrUpdate(supplier);
+						
+						return true;
+						
+					}
+					
+					catch (Exception e){
+						
+						e.printStackTrace();
+						
+						return false;
+						
+					}
 			}
 
 	}

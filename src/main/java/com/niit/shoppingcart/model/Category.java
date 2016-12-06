@@ -50,7 +50,7 @@ public void setName(String name)
 {
 	this.name=name;
 }
-
+/*
 private Set<Product> products;
 
 @OneToMany (mappedBy="category",fetch=FetchType.EAGER)
@@ -62,7 +62,7 @@ public Set<Product> getProducts()
 public void Setproducts(Set<Product>products)
 {
 	this.products=products;
-}
+}*/
 
 
 

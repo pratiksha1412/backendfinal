@@ -7,9 +7,9 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-@Entity
+
 @Component
-@Table(name="paymentmethod")
+
 public class PaymentMethod {
 	
 	
